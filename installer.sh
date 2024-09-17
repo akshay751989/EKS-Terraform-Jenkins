@@ -1,4 +1,14 @@
 #!/bin/bash
+
+# Update package sources
+apt-get update
+# Install the SSM agent
+snap install amazon-ssm-agent --classic
+
+# Enable and start the SSM agent
+systemctl enable snap.amazon-ssm-agent.amazon-ssm-agent.service
+systemctl start snap.amazon-ssm-agent.amazon-ssm-agent.service
+
 # Java installation for jenkins
 
 sudo apt update
